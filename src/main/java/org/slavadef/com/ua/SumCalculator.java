@@ -1,14 +1,10 @@
 package org.slavadef.com.ua;
-
+import java.util.stream.IntStream;
 public class SumCalculator {
-   public int sum (int n) throws IllegalArgumentException {
+   public int sum (int n) {
         if (n==0) {
-            throw new IllegalArgumentException();
+           throw  new IllegalArgumentException();
         }
-        int res = 0;
-        for(int i=0; i<=n;i++){
-            res+=i;
-        }
-        return res;
+      return IntStream.rangeClosed(0,n).sum();
     }
 }
